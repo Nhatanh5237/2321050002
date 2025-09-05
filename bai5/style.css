@@ -1,0 +1,20 @@
+body {
+    margin: 0px;
+}
+
+nav {
+    background-color: #0c4ca3;
+    padding: 10px;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 20px;
+}
+
+.danhmuc-lienket{
+    color: white;
+    text-decoration: none;
+}
