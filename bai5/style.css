@@ -4,17 +4,33 @@ body {
 
 nav {
     background-color: #0c4ca3;
-    padding: 10px;
 }
 
 ul {
     display: flex;
     justify-content: center;
     list-style: none;
-    gap: 20px;
+}
+
+li {
+    padding: 10px;
+}
+.border{
+    border-right: 1px solid gray;
 }
 
 .danhmuc-lienket{
     color: white;
     text-decoration: none;
+    font-family: Roboto, Arial, Tahoma;
+}
+
+.banner-qc {
+    display: flex;
+    justify-content: center;
+}
+
+.qc {
+    display: flex;
+    justify-content: space-between;
 }
