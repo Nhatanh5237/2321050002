@@ -43,6 +43,23 @@ li {
     gap: 10px;
 }
 
+.doitac {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    margin: 0px 150px;
+}
+
+.anh-doitac {
+    width: 25%;
+}
+
+.anh-doitac img {
+    width: 100%;
+    height: 175px;
+}
+
+
 .danhmuc-main {
     color: #0c4ca3;
     text-decoration: none;
@@ -55,7 +72,7 @@ li {
     display: flex;
     justify-content: center;
     margin: 0px 150px;
-    gap: 50px;
+    gap: 30px;
 }
 
 .thongbao {
@@ -85,4 +102,16 @@ header {
 
 footer {
     background-color: #0c4ca3;
+}
+
+/* Video */
+.video-bg {
+    display: flex;
+    background-color: black;
+    margin: 0px 150px;
+}
+
+.video-text {
+    color: white;
+    font-family: Roboto, Arial, Tahoma; 
 }
