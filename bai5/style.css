@@ -13,10 +13,17 @@ ul {
 }
 
 li {
+    list-style-type: square;
+    color: #0c4ca3;
     padding: 15px;
 }
+
 .border{
     border-right: 1px solid gray;
+}
+
+.description{
+    font-size: 80%;
 }
 
 .danhmuc-lienket{
@@ -33,24 +40,39 @@ li {
 .qc {
     display: flex;
     justify-content: space-between;
+    gap: 10px;
+}
+
+.danhmuc-main {
+    color: #0c4ca3;
+    text-decoration: none;
+    font-family: Roboto, Arial, Tahoma; 
+    text-align: left;
+    margin: 0px 150px;
 }
 
 .tintuc {
-    color: #0c4ca3;
-    text-decoration: none;
-    font-family: Roboto, Arial, Tahoma;   
-}
-
-.banner-tintuc {
     display: flex;
     justify-content: center;
+    margin: 0px 150px;
 }
 
-.tieude-tintuc {
+.thongbao {
     display: flex;
-    justify-content: space-between;
+    justify-content: left;
+    margin: 0px 150px;
+}
+
+.googlemap {
+    display: flex;
+    justify-content: left;
+    margin: 0px 150px;
 }
 
 header {
     border-bottom: 15px solid #f1f1f2;
+}
+
+footer {
+    background-color: #0c4ca3;
 }
