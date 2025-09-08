@@ -18,8 +18,16 @@ li {
     padding: 15px;
 }
 
+.container{
+    border: 1px solid gray;
+}
+
 .border{
     border-right: 1px solid gray;
+}
+
+.border-bottom{
+    border-bottom: 1px solid gray;
 }
 
 .description{
