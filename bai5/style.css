@@ -55,12 +55,22 @@ li {
     display: flex;
     justify-content: center;
     margin: 0px 150px;
+    gap: 50px;
 }
 
 .thongbao {
     display: flex;
     justify-content: left;
     margin: 0px 150px;
+}
+
+.anh-tintuc {
+    width: 25%;
+}
+
+.anh-tintuc img {
+    width: 100%;
+    height: 175px;
 }
 
 .googlemap {
