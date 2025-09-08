@@ -24,6 +24,7 @@ li {
 
 .description{
     font-size: 80%;
+    font-family: Roboto, Arial, Tahoma;
 }
 
 .danhmuc-lienket{
@@ -47,7 +48,7 @@ li {
     display: flex;
     justify-content: space-between;
     gap: 5px;
-    margin: 0px 150px;
+    margin: 0px 185px;
 }
 
 .anh-doitac {
@@ -65,20 +66,32 @@ li {
     text-decoration: none;
     font-family: Roboto, Arial, Tahoma; 
     text-align: left;
-    margin: 0px 150px;
+    margin: 0px 185px;
+}
+
+.danhmuc-submain {
+    color: #0c4ca3;
+    text-decoration: none;
+    font-family: Roboto, Arial, Tahoma; 
+    text-align: left;
 }
 
 .tintuc {
     display: flex;
     justify-content: center;
-    margin: 0px 150px;
+    margin: 0px 185px;
     gap: 30px;
 }
 
 .thongbao {
     display: flex;
     justify-content: left;
-    margin: 0px 150px;
+    margin: 0px 185px;
+}
+
+.motathongbao {
+    font-family: Roboto, Arial, Tahoma; 
+    margin: 0px 185px;
 }
 
 .anh-tintuc {
@@ -93,25 +106,32 @@ li {
 .googlemap {
     display: flex;
     justify-content: left;
-    margin: 0px 150px;
+    margin: 0px 185px;
 }
 
 header {
     border-bottom: 15px solid #f1f1f2;
 }
 
-footer {
-    background-color: #0c4ca3;
-}
-
 /* Video */
 .video-bg {
-    display: flex;
     background-color: black;
-    margin: 0px 150px;
+    margin: 0px 185px;
 }
 
 .video-text {
     color: white;
     font-family: Roboto, Arial, Tahoma; 
+}
+
+/* Footer */
+footer {
+    background-color: #0c4ca3;
+}
+
+.footer-title {
+    color: white;
+    font-family: Roboto, Arial, Tahoma; 
+    margin: 0px 180px;
+    padding: 10px;
 }
