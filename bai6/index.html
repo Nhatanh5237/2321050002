@@ -3,25 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Spotify</title>
     <style>
         header {
-
+            
         }
-        body {background-color: black;}
     </style>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
+
 <body>
     <header>
         <!-- Header -->
-         <div class="search">
-            <input type="text" name="phatnd" placeholder="What do you want to play?">
+         <div class="navbar">
+            <div class="nav-logo"><i class="fa-solid fa-house"></i></div>
+            <input type="text" placeholder="What do you want to play?">
          </div>
     </header>
     <main>
-        <div class="main-bg">
-            <h1>Your Libary</h1>
+        <div class="main-body">
+            <div class="main-library">
+                Your Library
+            </div>
+
+            <div class="main-music">
+                <div class="filters">
+                    <button>All</button>
+                    <button>Music</button>
+                    <button>Podcast</button>
+                </div>
+            </div>
+
+            <div class="main-likedsong">
+                Liked Songs
+            </div>
         </div>
     </main>
     <footer>

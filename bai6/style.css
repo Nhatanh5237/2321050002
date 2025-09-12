@@ -1,14 +1,69 @@
-h1 {
+body {
+    background-color: black;
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, sans-serif;
 }
 
-.main-bg{
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: black;
+    position: sticky;
+    top: 0;
+}
+
+.navbar-logo {
+    margin-right: 20px;
+    color: white;
+}
+
+.navbar input {
+    width: 400px;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
     background-color: #1f1f1f;
 }
 
-.search {
+.filters {
+    gap: 20px;
+}
+
+.filters button {
+    background-color: #2a2a2a;
+    color: white;
+    border-radius: 20px;
+}
+
+.main-body{
+    height: 100%;
     display: flex;
     justify-content: center;
-    list-style: none;
+}
+
+.main-library{
+    background-color: #1f1f1f;
+    width: 20%;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 15px;
+}
+
+.main-music{
+    background-color: #1f1f1f;
+    width: 50%;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 15px;
+}
+
+.main-likedsong{
+    background-color: #1f1f1f;
+    width: 30%;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 15px;
 }
