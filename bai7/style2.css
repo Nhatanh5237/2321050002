@@ -1,0 +1,186 @@
+body {
+    background-color: rgb(34, 34, 34);
+    margin: 0;
+    color: white;
+    padding: 0px;
+}
+
+
+
+header {
+    background-color: black;
+    width: 100%;
+    height: 15vh;
+    position: fixed;
+}
+
+.container {
+    width: 70%;
+    margin: auto;
+    justify-content: space-between;
+    display: flex;
+}
+
+.chucnang {
+    padding-left: 70px;
+}
+
+.chucnang ul {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 5px;
+}
+
+.chucnang ul li {
+    padding: 5px;
+    border: 8px solid transparent;
+    border-radius: 12px;
+}
+
+.chucnang ul li:hover {
+    cursor: pointer;
+    border-color: orange;
+    /* Khi hover, viền chuyển sang màu cam */
+}
+
+.l1 {
+    background-color: #f8b931;
+}
+
+li main ul {
+    display: flex;
+    list-style: none;
+    /* gap: 20px; */
+    padding: 0;
+    margin: 0;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 15px;
+}
+
+nav ul li img {
+    width: 100%;
+    height: 80px;
+    display: block;
+}
+
+li {
+    margin-right: 20px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.m {
+    overflow-y: scroll;
+}
+
+main {
+    padding-top: 138.594px;
+    width: 70%;
+    background-color: rgb(34, 34, 34);
+    height: auto;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+main .pbt div {
+    padding-bottom: 10px;
+}
+
+main .f ul {
+    display: flex;
+    padding: 5px;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    box-sizing: border-box;
+    justify-content: center;
+    list-style: none;
+}
+
+.f .f0 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.f0 ul li:hover {
+    background-color: rgb(90, 90, 90);
+    border-radius: 12px;
+}
+
+.f0 ul li p {
+    justify-self: center;
+}
+
+
+main .pbt1 div {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 12px;
+}
+
+main img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 12px;
+
+}
+
+footer {
+    height: 15vh;
+    background-color: rgb(34, 34, 34);
+    width: 70%;
+    margin: auto;
+    padding: 24px 0;
+    box-sizing: border-box;
+}
+
+footer .footer-main {
+    border-top: 1px solid #333;
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-col h4 {
+    color: #f8d78f;
+    margin-bottom: 12px;
+    font-size: 16px;
+}
+
+.footer-social img {
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.footer-bottom {
+    border-top: 1px solid #333;
+    margin-top: 24px;
+    padding: 16px 0;
+    color: #ccc;
+    font-size: 13px;
+    text-align: left;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
