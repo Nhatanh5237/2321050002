@@ -4,40 +4,13 @@ body {
     color: black;
 }
 
-h1 {
-    text-align: center;
-}
-
-p {
-    text-align: center;
-    color: gray;
-}
-
-input {
-    width: 300px;
-    padding: 10px;
-    border-radius: 10px;
-    border: 1px solid #ccc;
-    outline: none;
-    background-color: transparent;
-}
-
 main{
     width: 50%;
+    height: 50%;
     background-color: white;
     border-radius: 10px;
-    height: 500px;
     margin: auto;
     border-radius: 10px;
 }
 
-.logo {
-    align-items: center;
-    margin: auto;
-    text-align: center;
-    padding: 50px;
-}
-
-.border-bottom{
-    border-bottom: 3px solid #F2F1F6;
-}
+.main-left
