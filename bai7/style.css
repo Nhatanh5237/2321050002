@@ -7,15 +7,18 @@ body {
 header {
     background-color: black;
     width: 100%;
-    height: 10vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    top: 0px;
 }
 
 .container {
     width: 70%;
     margin: auto;
+    display: flex;
+    justify-content: space-between;
 }
 
 ul {
@@ -40,7 +43,6 @@ main {
     width: 70%;
     background-color: black;
     border-radius: 10px;
-    height: 1000px;
     margin: auto;
 }
 
@@ -69,3 +71,70 @@ main {
     font-weight: bold;
 }
 
+main img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 12px;
+
+}
+
+main .f ul {
+    display: flex;
+    padding: 5px;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    box-sizing: border-box;
+    justify-content: center;
+    list-style: none;
+}
+
+.f .f0 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.f0 ul li p {
+    justify-self: center;
+}
+
+footer .container {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer {
+    background-color: #121212;
+    width: 80%;
+    margin: auto;
+    padding: 24px 0;
+    box-sizing: border-box;
+}
+
+.footer-main {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-col h4 {
+    color: white;
+    margin-bottom: 12px;
+    font-size: 16px;
+}
+
+.footer-bottom {
+    border-top: 1px solid #333;
+    margin-top: 24px;
+    padding: 16px 0;
+    text-align: left;
+    max-width: 100%;
+    border-bottom: 1px solid #333;
+}
+
+.footer-end {
+    text-align: center;
+    padding: 30px;
+}

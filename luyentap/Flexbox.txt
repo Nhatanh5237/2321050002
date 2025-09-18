@@ -1,0 +1,124 @@
+Rất hay 👍. Đây đều là những thuộc tính quan trọng trong **Flexbox**. Mình sẽ giải thích lần lượt cho bạn, có ví dụ ngắn để dễ hình dung:
+
+---
+
+## 🔹 1. `justify-content`
+
+👉 Căn chỉnh **theo trục chính (main axis)**.
+
+* Nếu `flex-direction: row;` → căn ngang.
+* Nếu `flex-direction: column;` → căn dọc.
+
+Các giá trị hay dùng:
+
+* `flex-start` (mặc định) → dồn về đầu trục.
+* `flex-end` → dồn về cuối trục.
+* `center` → căn giữa.
+* `space-between` → khoảng trống đều nhau, **2 đầu dính sát**.
+* `space-around` → khoảng trống đều nhau, **2 đầu có khoảng trống 1/2**.
+* `space-evenly` → khoảng trống đều nhau, **kể cả 2 đầu**.
+
+---
+
+## 🔹 2. `align-items`
+
+👉 Căn chỉnh **theo trục phụ (cross axis)**, tức vuông góc với trục chính.
+
+Giá trị thường dùng:
+
+* `stretch` (mặc định) → item giãn ra đầy chiều cross.
+* `flex-start` → dồn về đầu cross.
+* `flex-end` → dồn về cuối cross.
+* `center` → căn giữa cross.
+* `baseline` → căn theo dòng chữ (chữ cái).
+
+---
+
+## 🔹 3. `flex-direction`
+
+👉 Xác định **hướng trục chính** của container.
+
+* `row` (mặc định) → trái → phải.
+* `row-reverse` → phải → trái.
+* `column` → trên → dưới.
+* `column-reverse` → dưới → trên.
+
+---
+
+## 🔹 4. `order`
+
+👉 Thay đổi **thứ tự hiển thị** của item, không cần thay đổi HTML.
+
+* Mặc định: `order: 0`.
+* Giá trị càng nhỏ → xuất hiện trước.
+* Có thể âm hoặc dương.
+
+---
+
+## 🔹 5. `align-self`
+
+👉 Căn chỉnh **một item riêng lẻ** theo trục phụ (cross axis).
+
+* Ghi đè `align-items` của container.
+* Giá trị giống `align-items` (`flex-start`, `flex-end`, `center`, `stretch`, `baseline`).
+
+Ví dụ: một item được căn giữa trong khi các item khác dồn lên đầu.
+
+---
+
+## 🔹 6. `flex-wrap`
+
+👉 Quyết định item có xuống dòng (wrap) khi container hẹp không.
+
+* `nowrap` (mặc định) → tất cả item nằm trên 1 dòng, có thể bị ép nhỏ.
+* `wrap` → item tự động xuống dòng khi không đủ chỗ.
+* `wrap-reverse` → xuống dòng nhưng theo hướng ngược.
+
+---
+
+## 🔹 7. `flex-flow`
+
+👉 Viết gộp của **`flex-direction`** + **`flex-wrap`**.
+
+Cú pháp:
+
+```css
+flex-flow: <flex-direction> <flex-wrap>;
+```
+
+Ví dụ:
+
+```css
+flex-flow: row wrap;  /* vừa định hướng ngang vừa cho phép xuống dòng */
+```
+
+---
+
+## 🔹 8. `align-content`
+
+👉 Căn chỉnh **các dòng flex** (chỉ có tác dụng khi có nhiều dòng do `flex-wrap`).
+
+* `flex-start` → dồn tất cả dòng lên trên.
+* `flex-end` → dồn xuống dưới.
+* `center` → căn giữa dọc.
+* `space-between` → khoảng trống đều nhau, 2 đầu sát mép.
+* `space-around` → khoảng trống đều nhau, 2 đầu có nửa khoảng trống.
+* `space-evenly` → khoảng trống đều nhau, kể cả mép.
+* `stretch` (mặc định) → giãn đầy không gian.
+
+---
+
+✅ Tóm lại:
+
+* `justify-content` → căn chỉnh **theo trục chính**.
+* `align-items` → căn chỉnh **theo trục phụ**.
+* `flex-direction` → xác định **hướng trục chính**.
+* `order` → thay đổi thứ tự item.
+* `align-self` → căn chỉnh riêng 1 item.
+* `flex-wrap` → cho phép xuống dòng.
+* `flex-flow` → gộp `direction` + `wrap`.
+* `align-content` → căn chỉnh **các dòng** khi có nhiều dòng flex.
+
+---
+
+Bạn có muốn mình vẽ một **sơ đồ trực quan trục chính – trục phụ** để dễ nhớ `justify` và `align` hơn không?
