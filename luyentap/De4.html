@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đề 4</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: white;
+            width: 100%;
+        }
+
+        body {
+            background-color: white;
+            margin: 0;
+            color: black;
+            padding: 0px;
+        }
+
+        nav {
+            padding: 20px;
+        }
+
+        nav ul {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            gap: 30px;
+        }
+
+        nav ul li {
+            margin-right: 0;
+        }
+
+        nav ul li h4 a {
+            color: black;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        button {
+            border-radius: 20px;
+            border: none;
+            outline: none;
+        }
+
+        .container {
+            width: 100%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .main-body {
+            height: 100%;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .home {
+            background-color: white;
+            width: 10%;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 15px;
+        }
+
+        .home p {
+            margin: 10px;
+            padding: 8px;   /* thêm padding để có cảm giác như hộp */
+            border-radius: 5px;
+        }
+
+        .home p:hover {
+            cursor: pointer;
+            background-color: #e0e0e0;
+        }
+
+        .content {
+            background-color: white;
+            width: 70%;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 15px;
+        }
+
+        .box {
+            border: 1px solid gray;
+            border-radius: 20px;
+            margin: 10px;
+        }
+
+        .content-head {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        h3 {
+            margin: 10px;
+        }
+
+        h4 {
+            color: gray;
+            margin: 10px;
+            text-align: center;
+        }
+
+        p {
+            margin: 10px;
+        }
+
+        /* Bảng */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            /* Gộp viền để không bị 2 đường chồng lên */
+            font-size: 14px;
+        }
+
+        thead th {
+            text-align: left;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tbody td {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+        tbody tr.category td {
+            font-weight: bold;
+            background: #f9f9f9;
+            border-top: 1px solid #ddd;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li>
+                        <h4><a href="#"><img src="" alt="OPEN AI"></a></h4>
+                    </li>
+                </ul>
+            </nav>
+
+            <nav>
+                <ul>
+                    <li>
+                        <button>
+                            <h4><a href="#">Log in</a></h4>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+        <div class="main-body">
+            <div class="home">
+                <h4>Home</h4>
+                <p>API Platform</p>
+                <p>API Pricing</p>
+                <p>Codex</p>
+                <p>Open Models</p>
+                <p>Community</p>
+            </div>
+
+            <div class="content">
+                <div class="content-head">
+                    <div class="box">
+                        <h4>Lorem ipsum</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.
+                        </p>
+                    </div>
+                    <div class="box">
+                        <h4>Lorem ipsum</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.
+                        </p>
+                    </div>
+                    <div class="box">
+                        <h4>Lorem ipsum</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.
+                        </p>
+                    </div>
+                    <div class="box">
+                        <h4>Lorem ipsum</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <h3>Model performance</h3>
+                </div>
+                <div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>gpt-oss-120b</th>
+                                <th>gpt-oss-20b</th>
+                                <th>OpenAI o3</th>
+                                <th>OpenAI o4-mini</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="category">
+                                <td colspan="5">Reasoning & knowledge</td>
+                            </tr>
+                            <tr>
+                                <td>MMLU</td>
+                                <td>90.0</td>
+                                <td>85.3</td>
+                                <td>93.4</td>
+                                <td>93.0</td>
+                            </tr>
+                            <tr>
+                                <td>GPQA Diamond</td>
+                                <td>80.1</td>
+                                <td>71.5</td>
+                                <td>83.3</td>
+                                <td>81.4</td>
+                            </tr>
+                            <tr>
+                                <td>Humanity’s Last Exam</td>
+                                <td>19.0</td>
+                                <td>17.3</td>
+                                <td>24.9</td>
+                                <td>17.7</td>
+                            </tr>
+
+                            <tr class="category">
+                                <td colspan="5">Competition math</td>
+                            </tr>
+                            <tr>
+                                <td>AIME 2024</td>
+                                <td>96.6</td>
+                                <td>96.0</td>
+                                <td>95.2</td>
+                                <td>98.7</td>
+                            </tr>
+                            <tr>
+                                <td>AIME 2025</td>
+                                <td>97.9</td>
+                                <td>98.7</td>
+                                <td>98.4</td>
+                                <td>99.5</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+
+    </footer>
+</body>
+
+</html>

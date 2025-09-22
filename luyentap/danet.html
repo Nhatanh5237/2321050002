@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DANET</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #1e1e1e;
+            width: 100%;
+            position: fixed;
+            top: 0px;
+        }
+
+        body {
+            background-color: #121212;
+            margin: 0;
+            color: white;
+            padding: 0px;
+        }
+
+        main {
+            background-color: #121212;
+            width: 80%;
+            height: auto;
+            margin: auto;
+            box-sizing: border-box;
+        }
+
+        nav {
+            padding: 20px;
+        }
+
+        nav ul {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            gap: 30px;
+        }
+
+        nav ul li {
+            margin-right: 0;
+        }
+
+        nav ul li h4 a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        nav ul li h4 a:hover {
+            color: #8abf40;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .container {
+            width: 100%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Poster */
+        .poster {
+            color: black;
+            margin: 20px auto;
+            width: 100%;
+            border-radius: 10px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .poster img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .poster-title {
+            position: absolute;
+            bottom: 20px;
+            left: 30px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* MAIN */
+        main img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 12px;
+
+        }
+
+        main .f ul {
+            display: flex;
+            padding: 5px;
+            overflow-x: scroll;
+            scrollbar-width: none;
+            box-sizing: border-box;
+            justify-content: center;
+            list-style: none;
+        }
+
+        .f .f0 {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .f0 ul li p {
+            justify-self: center;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #121212;
+            width: 80%;
+            margin: auto;
+            padding: 24px 0;
+            box-sizing: border-box;
+        }
+
+        .footer-main {
+            display: flex;
+            gap: 20px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #333;
+            margin-top: 24px;
+            padding: 16px 0;
+            text-align: left;
+            max-width: 100%;
+            border-bottom: 1px solid #333;
+        }
+
+        .footer-end {
+            text-align: center;
+            padding: 30px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li>
+                        <h4><a href="#"><img src="" alt="DANET"></a></h4>
+                    </li>
+                    <li>
+                        <h4><a href="#">Miễn Phí</a></h4>
+                    </li>
+                    <li>
+                        <h4><a href="#">Phim Gói</a></h4>
+                    </li>
+                    <li>
+                        <h4><a href="#">Truyền Hình</a></h4>
+                    </li>
+                </ul>
+            </nav>
+
+            <nav>
+                <ul>
+                    <li>
+                        <h4><a href="#">Chuông</a></h4>
+                    </li>
+                    <li>
+                        <h4><a href="#">Đăng Ký Gói</a></h4>
+                    </li>
+                    <li>
+                        <h4><a href="#">Kính Lúp</a></h4>
+                    </li>
+                    <li>
+                        <h4><a href="#">Đăng Nhập</a></h4>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+        <div>
+            <!-- Quảng Cáo -->
+            <section class="poster">
+                <img width="100%" src="../Picture/fpt/img/09_68bfea5810013f0001205210.jpg" alt="">
+            </section>
+
+            <!-- Poster -->
+            <section class="poster">
+                <img width="100%" src="../Picture/fpt/img/640x396-muado.jpg" alt="">
+            </section>
+
+            <section class="poster">
+                <img width="100%" src="../Picture/fpt/img/qc.jpg" alt="">
+            </section>
+        </div>
+        <div class="f">
+            <div class="f0">
+                <div>Title</div>
+                <div>
+                    <ul>
+                        <li><a href="#"><img src="../Picture/fpt/img/phim/johnwi.jpg" alt="">
+                                <p>John Wick</p>
+                            </a>
+                        </li>
+                        <li><a href="#"><img src="../Picture/fpt/img/phim/johnwi.jpg" alt="">
+                                <p>John Wick</p>
+                            </a>
+                        </li>
+                        <li><a href="#"><img src="../Picture/fpt/img/phim/johnwi.jpg" alt="">
+                                <p>John Wick</p>
+                            </a>
+                        </li>
+                        <li><a href="#"><img src="../Picture/fpt/img/phim/johnwi.jpg" alt="">
+                                <p>John Wick</p>
+                            </a>
+                        </li>
+                        <li><a href="#"><img src="../Picture/fpt/img/phim/johnwi.jpg" alt="">
+                                <p>John Wick</p>
+                            </a>
+                        </li>
+                        <li><a href="#"><img src="../Picture/fpt/img/phim/johnwi.jpg" alt="">
+                                <p>John Wick</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="f0">
+                <div>Title</div>
+                <div>
+                    <ul>
+                        <li><a href="#"><img src="../Picture/fpt/img/phim/johnwi.jpg" alt="">
+                                <p>John Wick</p>
+                            </a>
+                        </li>
+                        <li><a href="#"><img src="../Picture/fpt/img/phim/johnwi.jpg" alt="">
+                                <p>John Wick</p>
+                            </a>
+                        </li>
+                        <li><a href="#"><img src="../Picture/fpt/img/phim/johnwi.jpg" alt="">
+                                <p>John Wick</p>
+                            </a>
+                        </li>
+                        <li><a href="#"><img src="../Picture/fpt/img/phim/johnwi.jpg" alt="">
+                                <p>John Wick</p>
+                            </a>
+                        </li>
+                        <li><a href="#"><img src="../Picture/fpt/img/phim/johnwi.jpg" alt="">
+                                <p>John Wick</p>
+                            </a>
+                        </li>
+                        <li><a href="#"><img src="../Picture/fpt/img/phim/johnwi.jpg" alt="">
+                                <p>John Wick</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="f0">
+                <div>Title</div>
+                <div>
+                    <ul>
+                        <li><a href="#"><img src="../Picture/fpt/img/phim/johnwi.jpg" alt="">
+                                <p>John Wick</p>
+                            </a>
+                        </li>
+                        <li><a href="#"><img src="../Picture/fpt/img/phim/johnwi.jpg" alt="">
+                                <p>John Wick</p>
+                            </a>
+                        </li>
+                        <li><a href="#"><img src="../Picture/fpt/img/phim/johnwi.jpg" alt="">
+                                <p>John Wick</p>
+                            </a>
+                        </li>
+                        <li><a href="#"><img src="../Picture/fpt/img/phim/johnwi.jpg" alt="">
+                                <p>John Wick</p>
+                            </a>
+                        </li>
+                        <li><a href="#"><img src="../Picture/fpt/img/phim/johnwi.jpg" alt="">
+                                <p>John Wick</p>
+                            </a>
+                        </li>
+                        <li><a href="#"><img src="../Picture/fpt/img/phim/johnwi.jpg" alt="">
+                                <p>John Wick</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-col">
+                    <h4>Giới thiệu</h4>
+                </div>
+                <div class="footer-col">
+                    <h4>Quảng cáo</h4>
+                </div>
+                <div class="footer-col">
+                    <h4>Quyền riêng tư</h4>
+                </div>
+                <div class="footer-col">
+                    <h4>Điều khoản sử dụng</h4>
+                </div>
+                <div class="footer-col">
+                    <h4>Hướng dẫn sử dụng</h4>
+                </div>
+            </div>
+            <div class="footer-main">
+                <div class="footer-col">
+                    <h4>Tải ứng dụng:</h4>
+                </div>
+                <div class="footer-col">
+                    <h4><img src="" alt="Google Play"></h4>
+                </div>
+                <div class="footer-col">
+                    <h4><img src="" alt="App Store"></h4>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <h4>Công ty TNHH Hãng Phim Việt - Mã số doanh nghiệp: 0101356355</h4>
+            <h4>Giấy phép cung cấp dịch vụ phát thanh, truyền hình trái tuyến số 191/GP-BTTTT Do Bộ Thông tin và
+                Truyền thông cấp ngày 04/05/2018</h4>
+            <h4>Người chịu trách nhiệm nội dung: Bà Ngô Thị Bích Hạnh</h4>
+            <br>
+            <h4>Hợp tác cùng Công ty TNHH Bình Hạnh Đan</h4>
+            <h4>Tầng 11 tòa nhà Hồng Hà Center, 25 Lý Thường Kiệt, Quận Hoàn Kiếm, Hà Nội</h4>
+        </div>
+        <div class="footer-end">
+            <img src="" alt="Đã thông báo">
+            <br>
+            <h4>Copyright © DANET2025.</h4>
+        </div>
+    </footer>
+</body>
+
+</html>
