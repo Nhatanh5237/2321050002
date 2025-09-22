@@ -20,15 +20,50 @@
         const pi = 3.14;
 
         let soThuNhat = 10;
-        let soThuHai = "10";
-        let ketQua = 0;
+
+        let soThuHai = "9.5";
+
+        soThuHai = parseFloat(soThuHai);
+
+        //document.writeln(typeof (soThuHai));
+        document.writeln(soThuHai);
+
+        //let ketQua = 0;
         // + - * / %
-        ketQua = soThuNhat - soThuHai;
+        //ketQua = soThuNhat - soThuHai;
         // soThuNhat = soThuNhat + soThuHai
         // soThuNhat /= soThuHai
         // ketQua++;
-        document.writeln(ketQua)
-        document.writeln(soThuNhat != soThuHai)
+        //document.writeln(ketQua)
+        //document.writeln(!(soThuNhat !== soThuHai))
+
+        let thongTinSinhVien = {
+            hoTen: "Dương Trần Nhật Anh",
+            tuoi: 20,
+            gioiTinh: true,
+            lop: "Khoa Học Máy Tính K68"
+        }
+
+        let diaChiNhatAnh = {
+            thanhPho:"Vĩnh Phúc",
+            quanHuyen: "Phúc Yên",
+            duong: "2 Bà Trưng",
+            soNha: 39,
+        }
+
+        let namNay=2025;
+
+        thongTinSinhVien.diaChiNhatAnh=diaChiNhatAnh;
+
+        //document.writeln("<br>Xin chào " + thongTinSinhVien.hoTen + " lớp " + thongTinSinhVien.lop)
+        document.writeln("<br>Xin chào " + thongTinSinhVien.hoTen 
+        + " số nhà " + thongTinSinhVien.diaChiNhatAnh.soNha 
+        + " đường " + thongTinSinhVien.diaChiNhatAnh.duong 
+        + " huyện " + thongTinSinhVien.diaChiNhatAnh.quanHuyen
+        + " năm sinh "+ (namNay - thongTinSinhVien.tuoi)
+    );
+
+
 
     </script>
 </body>
