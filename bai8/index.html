@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let thongTinDonHang = {
+            maDonHang: "rauma",
+            thongTinKhachHang: {
+                hoTen: "Dương Trần Nhật Anh",
+                sdt: "0968889607",
+                trangThaiThanThiet: true,
+            },
+            danhSachSanPham: {
+                caPhe: {
+                    maSanPham: "cf",
+                    tenSanPham: "Cà Phê",
+                    soLuong: 3,
+                    giaTien: 25000,
+                },
+                matcha: {
+                    maSanPham: "mc",
+                    tenSanPham: "Matcha",
+                    soLuong: 6,
+                    giaTien: 20000,
+                },
+                traSua: {
+                    maSanPham: "ts",
+                    tenSanPham: "Trà Sữa",
+                    soLuong: 11,
+                    giaTien: 15000,
+                },
+            },
+            trangThaiThanhToan: true,
+            diaChiGiaoHang: "Thanh Hóa",
+        };
+        let tongGiaTienCaPhe = thongTinDonHang.danhSachSanPham.caPhe.giaTien * thongTinDonHang.danhSachSanPham.caPhe.soLuong;
+        let tongGiaTienMatcha = thongTinDonHang.danhSachSanPham.matcha.giaTien * thongTinDonHang.danhSachSanPham.matcha.soLuong;
+        let tongGiaTienTraSua = thongTinDonHang.danhSachSanPham.traSua.giaTien * thongTinDonHang.danhSachSanPham.traSua.soLuong;
+        let tongGiaTien = tongGiaTienCaPhe + tongGiaTienMatcha + tongGiaTienTraSua;
+
+        document.writeln("Tổng số tiền: " + tongGiaTien);
+
+        //STRING
+        document.writeln("<br>");
+        let hoTen = "Duong Tran Nhat Anh";
+        document.writeln(hoTen.length);
+
+        document.writeln("<br>");
+        let myString = "Hello Nhat Anh";
+        //document.writeln(myString[4]);
+        //document.writeln(myString.slice(1, 4));
+        //document.writeln(myString.replace("Hello", "Hi"));
+        //document.writeln(myString.toUpperCase());
+
+        //indexOf("Ki tu can tim kiem") Có: hiện vị trí ký tự; Không: hiện -1
+        //includes("Ki tu can tim kiem") True/Fale
+        //document.writeln(myString.indexOf("o"));
+        //document.writeln(myString.includes("o"));
+        
+        //tách chuỗi thành mảng split
+        //document.writeln(myString.split(''));
+        //document.writeln(myString.startsWith('Kien'));
+
+        var pi = 3.14159;
+        pi.toFixed(2); //Ket qua: 3.14
+
+        document.writeln(isNaN("10"));
+
+        let toDay = new Date();
+        //let toDay = new Date('2023-09-26');
+
+        //Lấy ra năm: getFullYear
+        //Lấy tháng: getMonth
+        //Lấy ngày: getDate
+        //Lấy thứ: getDay
+        document.writeln(toDay.getDay());
+        
+    </script>
+</body>
+
+</html>
