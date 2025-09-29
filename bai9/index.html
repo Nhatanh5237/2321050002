@@ -41,7 +41,61 @@
         //d = d.join("-") //biến mảng thành chuỗi (ngăn cách bằng dấu trong ngoặc)
 
         d.pop(); //xóa phần tử cuối mảng (shift là xóa phần tử đầu mảng; unshift là thêm phần tử đầu mảng)
+        d.push("Hoa Thanh Quế"); //thêm phần tử cuối mảng
+        d.reverse(); //đảo ngược mảng
         document.writeln(d);
+
+        //Điều Kiện
+        document.writeln("<br>");
+        let so = "100000000000000000000000000000000000000000000000000000000000000000000000000000001";
+        let socuoi = parseInt(so[so.length - 1]);
+        if (socuoi % 2 == 0) {
+            document.writeln(socuoi + " là số chẵn");
+        }
+        else {
+            document.writeln(socuoi + " là số lẻ");
+        }
+
+        let now = new Date().getHours();
+        debugger //tìm lỗi
+        if (5 <= now && now < 10) {
+            document.writeln("Chào buổi sáng");
+        }
+        else if (10 <= now && now < 13) {
+            document.writeln("Chào buổi trưa");
+        }
+        else if (13 <= now && now < 17) {
+            document.writeln("Chào buổi chiều");
+        }
+        else if (17 <= now && now < 20) {
+            document.writeln("Chào buổi tối");
+        }
+        else {
+            document.writeln("Chào buổi đêm");
+        }
+
+        // a,b,c
+        document.writeln("<br>");
+        let diemA = 8; let diemB = 7; let diemC = 9;
+        let tong = diemA * 0.6 + diemB * 0.3 + diemC * 0.1;
+        document.writeln("Tổng điểm là: " + tong.toFixed(1))
+
+        if (8 < tong && tong <= 10) {
+            document.writeln("Điểm A");
+        }
+        else if (7 < tong && tong <= 8) {
+            document.writeln("Điểm B");
+        }
+        else if (5 < tong && tong <= 7) {
+            document.writeln("Điểm C");
+        }
+        else if (4 < tong && tong <= 5) {
+            document.writeln("Điểm D");
+        }
+        else {
+            document.writeln("Điểm F");
+        }
+
     </script>
 </body>
 
