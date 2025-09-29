@@ -44,43 +44,45 @@
         let tongGiaTienTraSua = thongTinDonHang.danhSachSanPham.traSua.giaTien * thongTinDonHang.danhSachSanPham.traSua.soLuong;
         let tongGiaTien = tongGiaTienCaPhe + tongGiaTienMatcha + tongGiaTienTraSua;
 
-        document.writeln("Tổng số tiền: " + tongGiaTien);
+        document.writeln("Tổng số tiền: " + tongGiaTien + "<br>");
 
         //STRING
-        document.writeln("<br>");
         let hoTen = "Duong Tran Nhat Anh";
-        document.writeln(hoTen.length);
+        document.writeln(hoTen.length + "<br>");
 
-        document.writeln("<br>");
         let myString = "Hello Nhat Anh";
-        //document.writeln(myString[4]);
-        //document.writeln(myString.slice(1, 4));
-        //document.writeln(myString.replace("Hello", "Hi"));
-        //document.writeln(myString.toUpperCase());
+        document.writeln(myString[4] + "<br>");
+        document.writeln(myString.slice(1, 4) + "<br>");
+        document.writeln(myString.replace("Hello", "Hi") + "<br>");
+        document.writeln(myString.toUpperCase() + "<br>"); //toUpperCase: viết hoa hết; toLowerCase: viết thường hết
 
         //indexOf("Ki tu can tim kiem") Có: hiện vị trí ký tự; Không: hiện -1
         //includes("Ki tu can tim kiem") True/Fale
-        //document.writeln(myString.indexOf("o"));
-        //document.writeln(myString.includes("o"));
-        
+        document.writeln(myString.indexOf("o") + "<br>"); //Trả về chỉ số
+        document.writeln(myString.includes("o") + "<br>"); //Trả về true false
+
         //tách chuỗi thành mảng split
-        //document.writeln(myString.split(''));
-        //document.writeln(myString.startsWith('Kien'));
+        document.writeln(myString.split('') + "<br>");
+        document.writeln(myString.startsWith('Kien') + "<br>"); //Trả về true false
 
         var pi = 3.14159;
         pi.toFixed(2); //Ket qua: 3.14
 
-        document.writeln(isNaN("10"));
+        document.writeln(!isNaN("10") + "<br>");
 
-        let toDay = new Date();
-        //let toDay = new Date('2023-09-26');
+        //let toDay = new Date();
+        let toDay = new Date('2025-9-28');
+        document.writeln(toDay.getMonth() + 1);
 
         //Lấy ra năm: getFullYear
         //Lấy tháng: getMonth
         //Lấy ngày: getDate
         //Lấy thứ: getDay
+        document.writeln("<br>");
         document.writeln(toDay.getDay());
-        
+        document.writeln(toDay.getFullYear());
+
+
     </script>
 </body>
 

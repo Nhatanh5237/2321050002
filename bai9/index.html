@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MẢNG</title>
+</head>
+
+<body>
+    <script>
+        //MẢNG
+        let arr = [1, 2, 3, 4, 'a', 'b', 'c', 2, 3];
+
+        //Kiểm tra là mảng, trả về true/false
+        document.writeln(Array.isArray(arr) + "<br>");
+
+        //Kiểm tra độ dài của mảng
+        document.writeln(Array.length + "<br>");
+
+        //Trả về giá trị phần tử thứ x
+        document.writeln(arr[2] + "<br>");
+
+        //Trả về vị trí phần tử (không có thì trả về -1)
+        document.writeln(arr.indexOf(3) + "<br>");
+
+        //Trả về vị trí cuối cùng của phần tử
+        document.writeln(arr.lastIndexOf(3) + "<br>");
+
+        //Thay đổi giá trị của mảng
+        arr[3] = 6;
+
+        //concat (nối mảng)
+        document.writeln("<br>");
+        let a, b, c, d;
+        a = [1, 2, 3];
+        b = "JavaScript";
+        c = [42, "JS"]
+        d = a.concat(b, c);
+
+        //d = d.join("-") //biến mảng thành chuỗi (ngăn cách bằng dấu trong ngoặc)
+
+        d.pop(); //xóa phần tử cuối mảng (shift là xóa phần tử đầu mảng; unshift là thêm phần tử đầu mảng)
+        document.writeln(d);
+    </script>
+</body>
+
+</html>
