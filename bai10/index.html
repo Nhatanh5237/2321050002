@@ -4,31 +4,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CASE</title>
+    <title>SWITCH</title>
 </head>
 
 <body>
     <script>
-        let d = new Date();
-        let theDay = 2; //d.getDay(); // thứ lùi 1 ngày, nếu hôm nay là thứ 6 thì trả về 5 (chủ nhật là 0, thứ 2 là 1,...)
-        switch (theDay) {
-            case 5:
-                document.writeln("Finally Friday");
-                break;
-            case 6:
-                document.writeln("Super Saturday");
-                break;
-            case 0:
-                document.writeln("Sleepy Sunday");
-                break;
-            case 1:
-            case 2:
-            case 3:
-                document.writeln("I'm looking forward to this weekend!");
-                break;
-            default:
-                document.writeln("I'm looking forward to this weekend!");
+        // let d = new Date();
+        // let theDay = 2; //d.getDay(); // thứ lùi 1 ngày, nếu hôm nay là thứ 6 thì trả về 5 (chủ nhật là 0, thứ 2 là 1,...)
+        // switch (theDay) {
+        //     case 5:
+        //         document.writeln("Finally Friday");
+        //         break;
+        //     case 6:
+        //         document.writeln("Super Saturday");
+        //         break;
+        //     case 0:
+        //         document.writeln("Sleepy Sunday");
+        //         break;
+        //     case 1:
+        //     case 2:
+        //     case 3:
+        //         document.writeln("I'm looking forward to this weekend!");
+        //         break;
+        //     default:
+        //         document.writeln("I'm looking forward to this weekend!");
+        // }
+
+        let danhSach = ["Dương Trần Nhật	Anh ", "Dương Vũ	Anh ", "Trần Vũ Hải	Anh ", "Bùi Ngọc	Bích ", "Phạm Quốc	Bình ", "Nguyễn Văn	Chung ", "Hoàng Mạnh	Cường ", "Ngô Hoàng	Dương ", "Phạm Văn	Đại ", "Nguyễn Đình	Đạt ", "Phạm	Đức ", "Vũ Trung	Đức ", "Phạm Hương	Giang ", "Phạm Quang	Hậu ", "Trần Văn	Hiệp ", "Nguyễn Văn	Hoàng ", "Phạm Quốc	Hoàng ", "Phạm Thị	Huế ", "Trần Công	Hùng ", "Đào Thế	Huy ", "Đỗ Quang	Huy ", "Phạm Quang	Huy ", "Phạm Thành	Khang ", "Bùi Văn	Khiêm ", "Nguyễn Tiến	Khởi ", "Đỗ Trung	Kiên ", "Vương Hà	Linh ", "Đào Quang	Lộc ", "Ngô Gia	Lộc ", "Bùi Văn	Mạnh ", "Nguyễn Văn	Mạnh ", "Phan Văn	Mạnh ", "Trương Công	Minh ", "Đỗ Thành	Nam ", "Lê Duy	Nam ", "Nguyễn Hoàng	Nam ", "Nguyễn Anh	Quân ", "Cao Thị Thu	Quyên ", "Phạm Gia	Tài ", "Nguyễn Thị Thanh	Tâm © ", "Nguyễn Đình	Thái ", "Lưu Tiến	Thành ", "Trần Văn	Thành ", "Nguyễn Thị	Thúy ", "Nguyễn Thị	Thúy ", "Bùi Duy	Tiến ", "Nguyễn Văn	Tiến ", "Đỗ Văn	Trung ", "Phạm Đan	Trường ", "Lê Thị Cẩm	Tú ", "Phan Văn	Tuân ", "Cao Thái	Tuấn ", "Nguyễn Duy	Tuấn ", "Nguyễn Huy	Tuấn ", "Thiều Văn	Việt ", "Nguyễn Kiều	Vy"];
+        // if {}
+        // for (let i = 0; i < danhSach.length; i++) {
+        //         document.writeln(i + " Em cám ơn anh, " + danhSach[i] + "<br>");
+        //     }
+
+        let dem = 0;
+        for (let i = 0; i < danhSach.length; i++) {
+            //let ten = danhSach[i].trim();
+            if (danhSach[i].toLowerCase().startsWith("nguyễn")) {
+                dem = dem + 1;
+            }
         }
+
+        document.writeln("Số người họ Nguyễn: " + dem);
+
+        // for (let i = 0; i <= 360; i++) {
+        //     document.writeln(i + " E cám ơn a, a Bộ Pixi <br>");
+        // }
+
+        //WHILE
+        // let i = 0
+        // while (i <= 10) {
+        //     document.writeln("The number is " + i)
+        //     document.writeln("<br/>")
+        //     i = i + 1
+        // }
+
+        //ALERT
+        //alert("Hello");
+
+        //CONFIRM
+        // let result = confirm("Press a button");
+
+        // if (result == true) {
+        //     document.writeln("Bấm OK");
+        // }
+        // if (result == false) {
+        //     document.writeln("Bấm Cancel");
+        // }
+
+        //PROMPT
+        let result2 =prompt("Nhập họ tên", "Ví dụ: ABC");
+        document.writeln(result2);
+
     </script>
 </body>
 
