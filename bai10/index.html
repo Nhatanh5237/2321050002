@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CASE</title>
+</head>
+
+<body>
+    <script>
+        let d = new Date();
+        let theDay = 2; //d.getDay(); // thứ lùi 1 ngày, nếu hôm nay là thứ 6 thì trả về 5 (chủ nhật là 0, thứ 2 là 1,...)
+        switch (theDay) {
+            case 5:
+                document.writeln("Finally Friday");
+                break;
+            case 6:
+                document.writeln("Super Saturday");
+                break;
+            case 0:
+                document.writeln("Sleepy Sunday");
+                break;
+            case 1:
+            case 2:
+            case 3:
+                document.writeln("I'm looking forward to this weekend!");
+                break;
+            default:
+                document.writeln("I'm looking forward to this weekend!");
+        }
+    </script>
+</body>
+
+</html>
