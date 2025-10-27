@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Tính điểm chữ</h1>
+    <h3>Biết tổng= A * 0.6 + B * 0.3 + C * 0.1</h3>
+    <div>
+        Nhập điểm A:
+        <input type="number" id="diemA">
+    </div>
+    <div>
+        Nhập điểm B:
+        <input type="number" id="diemB">
+    </div>
+    <div>
+        Nhập điểm C:
+        <input type="number" id="diemC">
+    </div>
+    <div>
+        <button onclick="tinhTong()">Tính tổng điểm</button>
+    </div>
+    <div>
+        Kết quả: <input id="ketQua" class="ket-qua">
+    </div>
+
+    <script>
+        function tinhTong() {
+            let diemA = parseFloat(document.getElementById('diemA').value);
+            let diemB = parseFloat(document.getElementById('diemB').value);
+            let diemC = parseFloat(document.getElementById('diemC').value);
+
+            let canhBao = "";
+            if (diemA < 0 || diemB < 0 || diemC < 0 || diemA > 10 || diemB > 10 || diemC > 10) {
+                canhBao += "Vui lòng nhập điểm hợp lệ";
+            }
+            if (!diemA) {
+                canhBao += "Vui lòng nhập điểm A";
+            }
+            if (!diemB) {
+                canhBao += "Vui lòng nhập điểm B";
+            }
+            if (!diemC) {
+                canhBao += "Vui lòng nhập điểm C";
+            }
+            if (canhBao) {
+                alert(canhBao);
+                return;
+            }
+            let tong = diemA * 0.6 + diemB * 0.3 + diemC * 0.1
+            let result = document.getElementById('ketQua');
+
+            if (tong >= 8) {
+                result.value = "A";
+            } else if (tong >= 7 && tong < 8) {
+                result.value = "B";
+            } else if (tong >= 5 && tong < 7) {
+                result.value = "C";
+            } else if (tong >= 4 && tong < 5) {
+                result.value = "B";
+            } else {
+                result.value = "F";
+            }
+        }
+    </script>
+</body>
+
+</html>
