@@ -87,12 +87,14 @@
 
         let ten =prompt("Nhập họ tên", "Ví dụ: ABC");
         let namSinh =prompt("Nhập năm sinh", "Ví dụ: XXXX");
+        let tenVo =prompt("Nhập họ tên vợ", "Ví dụ: ABC");
+        let tenCon =prompt("Nhập họ tên con", "Ví dụ: ABC");
 
-        function sayHello2(ten, namSinh) {
-            document.writeln("Xin chào " + ten + " sinh năm " + namSinh);
+        function sayHello2(ten, namSinh, tenVo, tenCon) {
+            document.writeln("Xin chào " + ten + " sinh năm " + namSinh + " có vợ là " + tenVo + " và con là " + tenCon);
         }
         
-        sayHello2(ten, namSinh);
+        sayHello2(ten, namSinh, tenVo, tenCon);
 
         //Về nhà: cải tiến thêm cả tên vợ con
     </script>
