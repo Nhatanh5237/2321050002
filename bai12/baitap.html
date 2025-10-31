@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {}
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <h1>Tính chỉ số BMI</h1>
+        </div>
+        <div>
+            <p>Công thức: Cân nặng / (Chiều cao * Chiều cao)</p>
+            <p>Cân nặng: Kg</p>
+            <p>Chiều cao: m</p>
+        </div>
+        <div>
+            <p>Tạo input cho phép nhập vào chiều cao cân nặng</p>
+
+            <p>Tạo nút bấm kiểm tra chỉ số BMI</p>
+
+            <p>Trường hợp 1: Người dùng không nhập hoặc nhập sai thông tin phải cảnh báo</p>
+
+            <p>Trường hợp 2: Nhập đúng, hiển thị được chỉ số BMI và hình ảnh tương ứng</p>
+        </div>
+        <div>
+            Nhập chiều cao:
+            <input type="number" id="height">
+        </div>
+        <div>
+            Nhập cân nặng:
+            <input type="number" id="weight">
+        </div>
+        <div>
+            <button onclick="tinhBMI()">Tính chỉ số BMI</button>
+        </div>
+        <div>
+            Kết quả: <input id="ketQua" class="ket-qua">
+        </div>
+    </div>
+    <script>
+        function tinhBMI() {
+            let height = parseFloat(document.getElementById('height').value);
+            let weight = parseFloat(document.getElementById('weight').value);
+            let canhBao = "";
+
+            if (height < 0 || weight < 0) {
+                canhBao += "Vui lòng nhập chỉ số hợp lệ";
+            }
+            if (!height) {
+                canhBao += "Vui lòng nhập chiều cao (m)";
+            }
+            if (!weight) {
+                canhBao += "Vui lòng nhập cân nặng (kg)";
+            }
+            if (canhBao) {
+                alert(canhBao);
+                return;
+            }
+
+            let ketQua = weight / (height * height)
+            document.getElementById('ketQua').value = ketQua.toFixed(2);
+
+            // if (ketQua < 18.5) {
+            //     result.value = "Thiếu Cân";
+            // } else if (ketQua >= 25 && ketQua < 29.9) {
+            //     result.value = "Thừa Cân";
+            // } else if (ketQua >= 30  && ketQua < 39.9) {
+            //     result.value = "Béo phì cấp 1-2";
+            // } else if (tong >= 18.5 && tong < 24.9) {
+            //     result.value = "Bình thường";
+            // } else {
+            //     result.value = "Béo Phì Nặng";
+            // }
+
+        }
+
+    </script>
+</body>
+
+</html>

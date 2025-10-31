@@ -9,7 +9,7 @@
 
 <body>
     <h1>Tính điểm chữ</h1>
-    <h3>Biết tổng= A * 0.6 + B * 0.3 + C * 0.1</h3>
+    <h3>Biết tổng = A * 0.6 + B * 0.3 + C * 0.1</h3>
     <div>
         Nhập điểm A:
         <input type="number" id="diemA">
@@ -34,6 +34,7 @@
             let diemA = parseFloat(document.getElementById('diemA').value);
             let diemB = parseFloat(document.getElementById('diemB').value);
             let diemC = parseFloat(document.getElementById('diemC').value);
+            let result = document.getElementById('ketQua');
 
             let canhBao = "";
             if (diemA < 0 || diemB < 0 || diemC < 0 || diemA > 10 || diemB > 10 || diemC > 10) {
@@ -53,7 +54,6 @@
                 return;
             }
             let tong = diemA * 0.6 + diemB * 0.3 + diemC * 0.1
-            let result = document.getElementById('ketQua');
 
             if (tong >= 8) {
                 result.value = "A";
@@ -62,7 +62,7 @@
             } else if (tong >= 5 && tong < 7) {
                 result.value = "C";
             } else if (tong >= 4 && tong < 5) {
-                result.value = "B";
+                result.value = "D";
             } else {
                 result.value = "F";
             }
