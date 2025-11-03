@@ -4,45 +4,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tính Chỉ Số BMI</title>
     <style>
-        .container {}
+        body {
+            background-color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #1d93e3;
+            border-radius: 20px;
+        }
+
+        .button-click {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        button {
+            background: radial-gradient(circle, blue, coral);
+            color: white;
+            border-radius: 10px;
+            font-size: 24px;
+        }
+
+        .result-BMI {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
     </style>
 </head>
 
 <body>
     <div class="container">
         <div>
-            <h1>Tính chỉ số BMI</h1>
+            <h1>Tính Chỉ Số BMI</h1>
         </div>
-        <div>
-            <p>Công thức: Cân nặng / (Chiều cao * Chiều cao)</p>
-            <p>Cân nặng: Kg</p>
-            <p>Chiều cao: m</p>
-        </div>
-        <div>
-            <p>Tạo input cho phép nhập vào chiều cao cân nặng</p>
+        <div class="container-box">
+            <div>
+                <p>Chế độ sáng</p>
+            </div>
+            <div>
+                Nhập chiều cao (cm):
+                <input type="number" id="height">
+            </div>
+            <div>
+                Nhập cân nặng (kg):
+                <input type="number" id="weight">
+            </div>
+            <div class="button-click">
+                <div>
+                    <button onclick="tinhBMI()">Xem Kết Quả</button>
+                </div>
+                <div>
+                    <button onclick="reset()">Đặt Lại</button>
+                </div>
+                <div>
+                    <button onclick="switchMode()">Sáng/Tối</button>
+                </div>
 
-            <p>Tạo nút bấm kiểm tra chỉ số BMI</p>
-
-            <p>Trường hợp 1: Người dùng không nhập hoặc nhập sai thông tin phải cảnh báo</p>
-
-            <p>Trường hợp 2: Nhập đúng, hiển thị được chỉ số BMI và hình ảnh tương ứng</p>
+            </div>
+            <div>
+                Kết quả BMI của bạn: <input id="ketQua" class="ket-qua">
+            </div>
+            <div>
+                <p>Nhận xét BMI của bạn:</p>
+                <div class="result-BMI">
+                    <p></p>
+                </div>
+            </div>
+            <div>
+                <img height="350px" src="" class="img">
+            </div>
         </div>
-        <div>
-            Nhập chiều cao:
-            <input type="number" id="height">
-        </div>
-        <div>
-            Nhập cân nặng:
-            <input type="number" id="weight">
-        </div>
-        <div>
-            <button onclick="tinhBMI()">Tính chỉ số BMI</button>
-        </div>
-        <div>
-            Kết quả: <input id="ketQua" class="ket-qua">
-        </div>
+    </div>
     </div>
     <script>
         function tinhBMI() {
@@ -64,23 +110,54 @@
                 return;
             }
 
+            height = height / 100
             let ketQua = weight / (height * height)
             document.getElementById('ketQua').value = ketQua.toFixed(2);
 
-            // if (ketQua < 18.5) {
-            //     result.value = "Thiếu Cân";
-            // } else if (ketQua >= 25 && ketQua < 29.9) {
-            //     result.value = "Thừa Cân";
-            // } else if (ketQua >= 30  && ketQua < 39.9) {
-            //     result.value = "Béo phì cấp 1-2";
-            // } else if (tong >= 18.5 && tong < 24.9) {
-            //     result.value = "Bình thường";
-            // } else {
-            //     result.value = "Béo Phì Nặng";
-            // }
-
+            if (ketQua < 18.5) {
+                document.getElementsByTagName('p')[2].innerHTML = 'Thiếu Cân';
+                document.getElementsByClassName('img')[0].src = '/Picture/BMI/thieuCan.jpg';
+            } else if (ketQua >= 18.5 && ketQua < 24.9) {
+                document.getElementsByTagName('p')[2].innerHTML = 'Bình Thường';
+                document.getElementsByClassName('img')[0].src = '/Picture/BMI/binhThuong.jpg';
+            } else if (ketQua >= 25 && ketQua < 29.9) {
+                document.getElementsByTagName('p')[2].innerHTML = 'Thừa Cân';
+                document.getElementsByClassName('img')[0].src = '/Picture/BMI/thuaCan.jpg';
+            } else if (ketQua >= 30 && ketQua < 39.9) {
+                document.getElementsByTagName('p')[2].innerHTML = 'Béo Phì Cấp 1-2';
+                document.getElementsByClassName('img')[0].src = '/Picture/BMI/beoPhiCap12.jpg';
+            } else {
+                document.getElementsByTagName('p')[2].innerHTML = 'Béo Phì Nặng';
+                document.getElementsByClassName('img')[0].src = '/Picture/BMI/beoPhiNang.jpg';
+            }
         }
 
+        function reset() {
+            document.getElementById('height').value = '';
+            document.getElementById('weight').value = '';
+            document.getElementById('ketQua').value = '';
+            document.getElementsByTagName('p')[2].innerHTML = '';
+            document.getElementsByClassName('img')[0].src = '';
+        }
+
+        let pageMode = true;
+
+        function switchMode() {
+            if (pageMode == true) {
+                document.getElementsByTagName('body')[0].style = 'background-color: black';
+                document.getElementsByTagName('h1')[0].style = 'color: white';
+                document.getElementsByTagName('p').style = 'color: white';
+                document.getElementsByTagName('p')[0].innerHTML = 'Chế độ tối';
+                pageMode = false;
+            }
+            else {
+                document.getElementsByTagName('body')[0].style = 'background-color: white';
+                document.getElementsByTagName('h1')[0].style = 'color: black';
+                document.getElementsByTagName('p').style = 'color: black';
+                document.getElementsByTagName('p')[0].innerHTML = 'Chế độ sáng';
+                pageMode = true;
+            }
+        }
     </script>
 </body>
 

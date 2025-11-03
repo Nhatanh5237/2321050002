@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>FPT Play</title>
     <link rel="stylesheet" href="style2.css">
 </head>
 
@@ -13,10 +13,11 @@
         <div class="container">
             <nav>
                 <ul>
-                    <li><img src="/Bài7/fpt/img/logowebsite4x_1748221195181.png" alt=""></li>
+                    <li><img src="/Picture/fpt/img/logowebsite4x_1748221195181.png" alt=""></li>
                     <li><a href="#">Trang chủ</a></li>
                     <li><a href="#">Truyền hình</a></li>
                     <li><a href="#">Phim bộ</a></li>
+                    <li><a href="#">Anime</a></li>
                     <li><a href="#">V.League</a></li>
                     <li><a href="#">Thiếu nhi</a></li>
                     <li><a href="#">Xem Thêm</a></li>
@@ -25,27 +26,63 @@
             <nav class="chucnang">
                 <ul>
                     <li><a href="#">Kính lúp</a></li>
-                    <li><a href="#"></a>Chuông</li>
+                    <li><a href="#">Chuông</a></li>
                     <li class="l1"><a href="#">Mua gói</a></li>
-                    <li><a href="#"></a>Đăng nhập</li>
+                    <li><a href="#">Đăng nhập</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+    
     <main>
         <div class="pbt">
             <div>
-                <img src="/Bài7/fpt/img/09_68bfea5810013f0001205210.jpg" alt="">
+                <img src="../Picture/fpt/img/09_68bfea5810013f0001205210.jpg" alt="">
             </div>
-            <div>
-                <img src="/Bài7/fpt/img/mua-do2-1122.jpeg" alt="">
+            <div class="banner">
+                <img src="../Picture/fpt/img/mua-do2-1122.jpeg" alt="">
             </div>
             <div class="pbt1">
-                <div><img src="/Bài7/fpt/img/qc.jpg" alt=""></div>
+                <div><img src="../Picture/fpt/img/qc.jpg" alt=""></div>
             </div>
         </div>
 
         <div class="f">
+            <div class="f0">
+                <div>Phim Chiếu Rạp</div>
+                <div>
+                    <ul>
+                        <li onclick="chonPhim(1)">
+                            <a href="#">
+                                <img src="../Picture/fpt/img/350x495-muado.jpg" alt="">
+                                <p>Mưa Đỏ</p>
+                            </a>
+                        </li>
+                        <li onclick="chonPhim(2)">
+                            <a href="#">
+                                <img src="../Picture/fpt/img/phim/beautyandthebeaets.jpg" alt="">
+                                <p>Người Đẹp Và Quái Thú</p>
+                            </a>
+                        </li>
+                        <li><a href="#"><img src="../Picture/fpt/img/phim/bongdungtrungso.jpg" alt="">
+                                <p>Bỗng Dưng Trúng Số</p>
+                            </a>
+                        </li>
+                        <li><a href="#"><img src="../Picture/fpt/img/phim/cam.jpg" alt="">
+                                <p>Cám</p>
+                            </a>
+                        </li>
+                        <li><a href="#"><img src="../Picture/fpt/img/phim/cogiaoemlaso1.jpg" alt="">
+                                <p>Cô Giáo Em Là Số 1</p>
+                            </a>
+                        </li>
+                        <li><a href="#"><img src="../Picture/fpt/img/phim/conan.jpg" alt="">
+                                <p>Thám Tử Lừng Danh Conan</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
             <div class="f0">
                 <div>Title</div>
                 <div>
@@ -145,11 +182,11 @@
         <div class="footer-main">
             <div class="footer-col">
                 <ul>
-                    <li><img src="/Bài7/fpt/img/logowebsite4x_1748221195181.png" alt="FPT Play"
+                    <li><img src="../Picture/fpt/img/logowebsite4x_1748221195181.png" alt="FPT Play"
                             style="width:120px; margin-bottom:16px;"></li>
-                    <li><img src="/Bài7/fpt/img/bocongthuong.png" alt="Bộ Công Thương"
+                    <li><img src="../Picture/fpt/img/bocongthuong.png" alt="Bộ Công Thương"
                             style="width:90px; margin-bottom:8px;"></li>
-                    <li><img src="/Bài7/fpt/img/dmca.png" alt="DMCA" style="width:90px;"></li>
+                    <li><img src="../Picture/fpt/img/dmca.png" alt="DMCA" style="width:90px;"></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -188,8 +225,8 @@
                     <li>Theo dõi chúng tôi trên:</li>
                     <li>
                         <span class="footer-social">
-                            <img src="/Bài7/fpt/img/facebook.png" alt="Facebook" style="width:24px;">
-                            <img src="/Bài7/fpt/img/youtube.png" alt="Youtube" style="width:24px;">
+                            <img src="../Picture/fpt/img/facebook.png" alt="Facebook" style="width:24px;">
+                            <img src="../Picture/fpt/img/youtube.png" alt="Youtube" style="width:24px;">
                         </span>
                     </li>
                 </ul>
@@ -209,8 +246,8 @@
                 ngày 10/10/2023.
             </p>
         </div>
-        </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>

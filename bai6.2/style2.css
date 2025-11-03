@@ -3,9 +3,8 @@ body {
     margin: 0;
     color: white;
     padding: 0px;
+    font-family: Arial, sans-serif;
 }
-
-
 
 header {
     background-color: black;
@@ -15,10 +14,16 @@ header {
 }
 
 .container {
-    width: 70%;
+    width: 80%;
     margin: auto;
     justify-content: space-between;
     display: flex;
+}
+
+.container ul li a:hover {
+    cursor: pointer;
+    color: orangered;
+    /* Khi hover, chữ chuyển sang màu đỏ cam */
 }
 
 .chucnang {
@@ -38,17 +43,17 @@ header {
 .chucnang ul li {
     padding: 5px;
     border: 8px solid transparent;
-    border-radius: 12px;
+    border-radius: 20px;
 }
 
-.chucnang ul li:hover {
+.chucnang ul li a:hover {
     cursor: pointer;
-    border-color: orange;
-    /* Khi hover, viền chuyển sang màu cam */
+    color: orangered;
+    /* Khi hover, chữ chuyển sang màu đỏ cam */
 }
 
 .l1 {
-    background-color: #f8b931;
+    background: radial-gradient(circle, orange, orangered);
 }
 
 li main ul {
@@ -75,10 +80,6 @@ nav ul li img {
     display: block;
 }
 
-li {
-    margin-right: 20px;
-}
-
 a {
     color: white;
     text-decoration: none;
@@ -90,7 +91,7 @@ a {
 
 main {
     padding-top: 138.594px;
-    width: 70%;
+    width: 80%;
     background-color: rgb(34, 34, 34);
     height: auto;
     margin: auto;
@@ -109,6 +110,7 @@ main .f ul {
     box-sizing: border-box;
     justify-content: center;
     list-style: none;
+    gap: 20px;
 }
 
 .f .f0 {
@@ -125,6 +127,14 @@ main .f ul {
     justify-self: center;
 }
 
+.f0 ul li img {
+    width: 250px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+    margin: 0 auto;
+}
 
 main .pbt1 div {
     padding-top: 15px;
@@ -144,7 +154,7 @@ main img {
 footer {
     height: 15vh;
     background-color: rgb(34, 34, 34);
-    width: 70%;
+    width: 80%;
     margin: auto;
     padding: 24px 0;
     box-sizing: border-box;
