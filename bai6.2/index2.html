@@ -33,14 +33,28 @@
             </nav>
         </div>
     </header>
-    
+
     <main>
         <div class="pbt">
             <div>
                 <img src="../Picture/fpt/img/09_68bfea5810013f0001205210.jpg" alt="">
             </div>
             <div class="banner">
-                <img src="../Picture/fpt/img/mua-do2-1122.jpeg" alt="">
+                <img class="img" src="../Picture/fpt/img/banner/mua-do2-1122.jpeg" alt="">
+                <div class="overlay">
+                    <div class="movie-info">
+                        <h1 class="ten-phim">Mưa Đỏ</h1>
+                        <p>
+                            <span class="nam"> • 2025</span>
+                            <span class="tuoi"> • T16</span>
+                            <span class="thoi-luong"> • 2 giờ</span>
+                            <span class="quoc-gia"> • Quốc gia: Việt Nam</span>
+                        <div>
+                            <button onclick="playTrailer()">XEM NGAY</button>
+                        </div>
+                        </p>
+                    </div>
+                </div>
             </div>
             <div class="pbt1">
                 <div><img src="../Picture/fpt/img/qc.jpg" alt=""></div>
@@ -54,7 +68,7 @@
                     <ul>
                         <li onclick="chonPhim(1)">
                             <a href="#">
-                                <img src="../Picture/fpt/img/350x495-muado.jpg" alt="">
+                                <img src="../Picture/fpt/img/phim/350x495-muado.jpg" alt="">
                                 <p>Mưa Đỏ</p>
                             </a>
                         </li>
@@ -64,19 +78,21 @@
                                 <p>Người Đẹp Và Quái Thú</p>
                             </a>
                         </li>
-                        <li><a href="#"><img src="../Picture/fpt/img/phim/bongdungtrungso.jpg" alt="">
+                        <li onclick="chonPhim(3)"><a href="#"><img src="../Picture/fpt/img/phim/bongdungtrungso.jpg"
+                                    alt="">
                                 <p>Bỗng Dưng Trúng Số</p>
                             </a>
                         </li>
-                        <li><a href="#"><img src="../Picture/fpt/img/phim/cam.jpg" alt="">
+                        <li onclick="chonPhim(4)"><a href="#"><img src="../Picture/fpt/img/phim/cam.jpg" alt="">
                                 <p>Cám</p>
                             </a>
                         </li>
-                        <li><a href="#"><img src="../Picture/fpt/img/phim/cogiaoemlaso1.jpg" alt="">
+                        <li onclick="chonPhim(5)"><a href="#"><img src="../Picture/fpt/img/phim/cogiaoemlaso1.jpg"
+                                    alt="">
                                 <p>Cô Giáo Em Là Số 1</p>
                             </a>
                         </li>
-                        <li><a href="#"><img src="../Picture/fpt/img/phim/conan.jpg" alt="">
+                        <li onclick="chonPhim(6)"><a href="#"><img src="../Picture/fpt/img/phim/conan.jpg" alt="">
                                 <p>Thám Tử Lừng Danh Conan</p>
                             </a>
                         </li>
@@ -84,93 +100,100 @@
                 </div>
             </div>
             <div class="f0">
-                <div>Title</div>
+                <div>Phim Việt Nam</div>
                 <div>
                     <ul>
-                        <li><a href="#"><img src="../Picture/fpt/img/phim/johnwi.jpg" alt="">
-                                <p>John Wick</p>
+                        <li onclick="chonPhim(1)">
+                            <a href="#">
+                                <img src="../Picture/fpt/img/phim/350x495-muado.jpg" alt="">
+                                <p>Mưa Đỏ</p>
                             </a>
                         </li>
-                        <li><a href="#"><img src="../Picture/fpt/img/phim/johnwi.jpg" alt="">
-                                <p>John Wick</p>
+                        <li onclick="chonPhim(9)"><a href=" #"><img src="../Picture/fpt/img/phim/keanhon.jpg" alt="">
+                                <p>Kẻ Ăn Hồn</p>
                             </a>
                         </li>
-                        <li><a href="#"><img src="../Picture/fpt/img/phim/johnwi.jpg" alt="">
-                                <p>John Wick</p>
+                        <li onclick="chonPhim(11)"><a href=" #"><img src="../Picture/fpt/img/phim/mai.jpg" alt="">
+                                <p>Mai</p>
                             </a>
                         </li>
-                        <li><a href="#"><img src="../Picture/fpt/img/phim/johnwi.jpg" alt="">
-                                <p>John Wick</p>
+                        <li onclick="chonPhim(12)"><a href=" #"><img src="../Picture/fpt/img/phim/matbiec.jpg" alt="">
+                                <p>Mắt Biếc</p>
                             </a>
                         </li>
-                        <li><a href="#"><img src="../Picture/fpt/img/phim/johnwi.jpg" alt="">
-                                <p>John Wick</p>
+                        <li onclick="chonPhim(16)"><a href=" #"><img src="../Picture/fpt/img/phim/tetolangdianguc.jpg"
+                                    alt="">
+                                <p>Tết Ở Làng Địa Ngục</p>
                             </a>
                         </li>
-                        <li><a href="#"><img src="../Picture/fpt/img/phim/johnwi.jpg" alt="">
-                                <p>John Wick</p>
+                        <li onclick="chonPhim(19)"><a href=" #"><img src="../Picture/fpt/img/phim/vongnhi.jpg" alt="">
+                                <p>Vong Nhi</p>
                             </a>
                         </li>
                     </ul>
                 </div>
             </div>
             <div class="f0">
-                <div>Title</div>
+                <div>Phim Hoạt Hình</div>
                 <div>
                     <ul>
-                        <li><a href="#"><img src="../Picture/fpt/img/phim/johnwi.jpg" alt="">
-                                <p>John Wick</p>
+                        <li onclick="chonPhim(6)"><a href="#"><img src="../Picture/fpt/img/phim/conan.jpg" alt="">
+                                <p>Thám Tử Lừng Danh Conan</p>
                             </a>
                         </li>
-                        <li><a href="#"><img src="../Picture/fpt/img/phim/johnwi.jpg" alt="">
-                                <p>John Wick</p>
+                        <li onclick="chonPhim(10)"><a href=" #"><img src="../Picture/fpt/img/phim/kungfupanda.jpg"
+                                    alt="">
+                                <p>Kungfu Gấu Trúc</p>
                             </a>
                         </li>
-                        <li><a href="#"><img src="../Picture/fpt/img/phim/johnwi.jpg" alt="">
-                                <p>John Wick</p>
+                        <li onclick="chonPhim(13)"><a href=" #"><img src="../Picture/fpt/img/phim/minion.jpg" alt="">
+                                <p>Minion</p>
                             </a>
                         </li>
-                        <li><a href="#"><img src="../Picture/fpt/img/phim/johnwi.jpg" alt="">
-                                <p>John Wick</p>
+                        <li onclick="chonPhim(14)"><a href=" #"><img src="../Picture/fpt/img/phim/nemo.jpg" alt="">
+                                <p>Đi Tìm Nemo</p>
                             </a>
                         </li>
-                        <li><a href="#"><img src="../Picture/fpt/img/phim/johnwi.jpg" alt="">
-                                <p>John Wick</p>
+                        <li onclick="chonPhim(18)"><a href=" #"><img src="../Picture/fpt/img/phim/toys.jpg" alt="">
+                                <p>Câu Chuyện Đồ Chơi</p>
                             </a>
                         </li>
-                        <li><a href="#"><img src="../Picture/fpt/img/phim/johnwi.jpg" alt="">
-                                <p>John Wick</p>
+                        <li onclick="chonPhim(20)"><a href=" #"><img src="../Picture/fpt/img/phim/walle.jpg" alt="">
+                                <p>Wall-E</p>
                             </a>
                         </li>
                     </ul>
                 </div>
             </div>
             <div class="f0">
-                <div>Title</div>
+                <div>Phim Ngẫu Nhiên</div>
                 <div>
                     <ul>
-                        <li><a href="#"><img src="../Picture/fpt/img/phim/johnwi.jpg" alt="">
-                                <p>John Wick</p>
+                        <li onclick="chonPhim(15)"><a href=" #"><img
+                                    src="../Picture/fpt/img/phim/satthuvocungcuchai.jpg" alt="">
+                                <p>Sát Thủ Vô Cùng Cực Hài</p>
                             </a>
                         </li>
-                        <li><a href="#"><img src="../Picture/fpt/img/phim/johnwi.jpg" alt="">
-                                <p>John Wick</p>
+                        <li onclick="chonPhim(17)"><a href=" #"><img src="../Picture/fpt/img/phim/texac.jpg" alt="">
+                                <p>Tế Xác</p>
                             </a>
                         </li>
-                        <li><a href="#"><img src="../Picture/fpt/img/phim/johnwi.jpg" alt="">
-                                <p>John Wick</p>
+                        <li onclick="chonPhim(21)"><a href=" #"><img src="../Picture/fpt/img/phim/xinloisatthu.jpg"
+                                    alt="">
+                                <p>Xin Lỗi Anh Chỉ Là Sát Thủ</p>
                             </a>
                         </li>
-                        <li><a href="#"><img src="../Picture/fpt/img/phim/johnwi.jpg" alt="">
-                                <p>John Wick</p>
+                        <li onclick="chonPhim(8)"><a href=" #"><img src="../Picture/fpt/img/phim/johnwi.jpg" alt="">
+                                <p>Sát Thủ John Wick</p>
                             </a>
                         </li>
-                        <li><a href="#"><img src="../Picture/fpt/img/phim/johnwi.jpg" alt="">
-                                <p>John Wick</p>
+                        <li onclick="chonPhim(7)"><a href=" #"><img src="../Picture/fpt/img/phim/deptraithaysaisai.jpg"
+                                    alt="">
+                                <p>Đẹp Trai Thấy Sai Sai</p>
                             </a>
                         </li>
-                        <li><a href="#"><img src="../Picture/fpt/img/phim/johnwi.jpg" alt="">
-                                <p>John Wick</p>
+                        <li onclick="chonPhim(13)"><a href=" #"><img src="../Picture/fpt/img/phim/minion.jpg" alt="">
+                                <p>Minion</p>
                             </a>
                         </li>
                     </ul>
@@ -184,9 +207,10 @@
                 <ul>
                     <li><img src="../Picture/fpt/img/logowebsite4x_1748221195181.png" alt="FPT Play"
                             style="width:120px; margin-bottom:16px;"></li>
-                    <li><img src="../Picture/fpt/img/bocongthuong.png" alt="Bộ Công Thương"
+                    <li><img src="../Picture/dmca_1755080854752.png" alt="DMCA" style="width:90px; margin-bottom:8px;">
+                    </li>
+                    <li><img src="../Picture/logosalenoti_1755080854748.png" alt="Bộ Công Thương"
                             style="width:90px; margin-bottom:8px;"></li>
-                    <li><img src="../Picture/fpt/img/dmca.png" alt="DMCA" style="width:90px;"></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -225,8 +249,8 @@
                     <li>Theo dõi chúng tôi trên:</li>
                     <li>
                         <span class="footer-social">
-                            <img src="../Picture/fpt/img/facebook.png" alt="Facebook" style="width:24px;">
-                            <img src="../Picture/fpt/img/youtube.png" alt="Youtube" style="width:24px;">
+                            <img src="../Picture/20673.png" alt="Facebook" style="width:24px;">
+                            <img src="../Picture/free-youtube-icon-123-thumb.png" alt="Youtube" style="width:24px;">
                         </span>
                     </li>
                 </ul>
