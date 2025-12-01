@@ -92,18 +92,68 @@
         //10. Mảng
         $mang = ["Anh", "Nhật Anh", "Vũ Anh"];
 
-        // Đếm phần tử
-        echo count($mang);
-        echo $mang[1] . "<br>";
+        // // Đếm phần tử
+        // echo count($mang);
+        // echo $mang[1] . "<br>";
+        // print_r($mang);
+        // $mang[0] = "Hai Anh";
+        // print_r($mang);
+        // $mang[0] = "Tam";
+        // print_r($mang);
+        // #xóa
+        // unset($mang[3]);
+        // print_r($mang);
+
+        #sắp xếp mảng
+        $mang = ["C", "B", "D", "A"];
         print_r($mang);
-        $mang[0] = "Hai Anh";
-        print_r($mang);
-        $mang[0] = "Tam";
-        print_r($mang);
-        #xóa
-        unset($mang[3]);
+        echo "<br>";
+        #sx tăng
+        sort($mang);
+        #sx giảm
+        rsort($mang);
         print_r($mang);
 
+        #String to array
+        $ten = "Dung, Kien, Hao, Minh, Phuong, Nam";
+
+        // 11 Kiểm tra xem biến có tồn tại hay không
+        $bienA = "hello";
+        isset($bienA); //true
+        isset($bienB); //false
+
+        if(isset($bienB)){
+            echo "Bien nay co ton tai";
+        }
+        else{
+            echo "Bien nay khong ton tai";
+        }
+
+        //check empty
+        $check = "";
+        if(empty($check)){
+            echo "empty";
+            echo "<br>";
+        }
+        else{
+            echo "no empty";
+            echo "<br>";
+        }
+
+        //12. Ham
+        #khong tham so
+        function xinChao(){
+            return "Hello";
+        }
+        
+        echo xinChao();
+
+        #co tham so
+        function xinChao2(){
+            return "Hello " . $ten;
+        }
+        
+        echo xinChao2("Anh");
     ?>
 </body>
 </html>
