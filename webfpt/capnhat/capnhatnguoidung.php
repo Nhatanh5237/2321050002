@@ -19,7 +19,7 @@
             justify-content: center;
         }
 
-        form div{
+        form div {
             width: 65%;
             margin: auto;
         }
@@ -90,15 +90,15 @@
         $vaiTro = $_POST["vai-tro"];
         $ngaySinh = $_POST["ngay-sinh"];
 
-        $sql = "UPDATE `nguoi_dung` SET `ten_dang_nhap`='$tenDangNhap',`mat_khau`='$matKhau',`ho_ten`='$hoTen',`email`='$email',`sdt`='$soDienThoai',`vai_tro_id`='$vaiTro',`ngay_sinh`='$ngaySinh' WHERE id='$id'";
+        $sql = "UPDATE `nguoi_dung` 
+                SET `ten_dang_nhap`='$tenDangNhap',`mat_khau`='$matKhau',`ho_ten`='$hoTen',`email`='$email',`sdt`='$soDienThoai',`vai_tro_id`='$vaiTro',`ngay_sinh`='$ngaySinh' 
+                WHERE id='$id'"; //id là duy nhất, không cập nhật
         $result = mysqli_query($conn, $sql);
         header('location: index.php?page_layout=nguoidung');
 
     } else {
-        echo "<p class= 'warning'> Vui lòng nhập đầy đủ thông tin ! </p>";
+        echo "<p class= 'warning'> Vui lòng nhập đầy đủ thông tin! </p>";
     }
-
-
     ?>
 
 </body>

@@ -9,40 +9,6 @@
 </head>
 
 <body>
-    <?php
-    // include("connect.php");
-    // $sql = "SELECT * FROM the_loai";
-    // $result = mysqli_query($conn, $sql);
-    // while ($row = mysqli_fetch_assoc($result)) {
-    //     $idTheLoai= $row["id"];
-    //     $sql2 = "SELECT p.* FROM phim p where p.the_loai_id = '$idTheLoai' ORDER BY id DESC LIMIT 4 ";
-    //     $result2 = mysqli_query($conn, $sql2);
-    //     if(mysqli_num_rows($result2)==0){
-    //     continue;
-    //     }
-    // } 
-    ?>
-    <header>
-        <div class="container">
-            <div class="head1">
-                <img src="img/logo.png" width="200px" height="100" alt="">
-                <div><a href="#">Trang chủ</a></div>
-                <div><a href="#">Truyền hình</a></div>
-                <div><a href="#">Phim bộ</a></div>
-                <div><a href="#">Anime</a></div>
-                <div><a href="#">V.League</a></div>
-            </div>
-            <div class="head2">
-                <div><a href="#">Tìm kiếm</a></div>
-                <div><a href="#">Thông báo</a></div>
-                <a href="https://fptplay.vn/mua-goi" target="_blank"
-                    style="padding: 10px 20px; background-color: rgb(230, 84, 48); border-radius: 15px;">Mua
-                    gói</a>
-                <div><a href="#">Đăng nhập</a></div>
-            </div>
-        </div>
-    </header>
-
     <main>
         <div class="main1">
             <div class="main1-1">
@@ -72,59 +38,32 @@
         <div class="main2">
             <?php
             include("connect.php");
-            $sql = "SELECT * FROM the_loai";
+            $sql = "SELECT * FROM the_loai"; # Danh sách tất cả thể loại phim
             $theLoai = mysqli_query($conn, $sql);
-            while ($hang = mysqli_fetch_assoc($theLoai)) {
+            # Lặp từng thể loại
+            while ($hang = mysqli_fetch_assoc($theLoai)) { # $hang là 1 thể loại
                 ?>
                 <div class="dm1">
-                    <p><?php echo $hang['ten_the_loai']; ?></p>
+                    <p><?php echo $hang['ten_the_loai']; ?></p> <!-- In tên thể loại ra HTML -->
                     <div class="dm1-1">
-                        <?php
-                        $sql = "SELECT p.*
+                        <?php # Lấy phim theo thể loại (JOIN bảng trung gian)
+                            $sql = "SELECT p.*
                                     FROM phim p
                                     JOIN phim_the_loai pl ON pl.phim_id = p.id
                                     WHERE pl.the_loai_id = {$hang['id']}";
-
-                        $result = mysqli_query($conn, $sql);
-                        while ($row = mysqli_fetch_assoc($result)) {
-                            ?>
+                            # LẤY tất cả phim (p.*) CÓ phim_id THUỘC the_loai_id hiện tại
+                        
+                            $result = mysqli_query($conn, $sql);
+                            while ($row = mysqli_fetch_assoc($result)) { # Lặp từng phim trong thể loại
+                                ?>
                             <div>
-                                <a href="#" onclick="chonPhim(1)">
-                                    <img class="pic2" src="<?php echo $row['poster']; ?>" alt="">
+                                <a href="index.php?page_layout=chi_tiet_phim&id=<?php echo $row['id']; ?>" onclick="chonPhim(<?php echo $row['id']; ?>)""> <!-- Hiển thị phim ra giao diện -->
+                                    <!-- Mỗi phim gồm: Poster và Tên Phim -->
+                                    <img class=" pic2" src="<?php echo $row['poster']; ?>" alt="">
 
                                     <div class="font"><?php echo $row['ten_phim']; ?></div>
                                 </a>
                             </div>
-                            <!-- <div>
-                        <a href="#" onclick="chonPhim(2)">
-                            <img class="pic2" src="img/phim/bongdungtrungso.jpg" alt="">
-                            <div class="font">Bỗng dưng trúng số</div>
-                        </a>
-                    </div>
-                    <div>
-                        <a href="#" onclick="chonPhim(3)">
-                            <img class="pic2" src="img/phim/cam.jpg" alt="">
-                            <div class="font">Cám</div>
-                        </a>
-                    </div>
-                    <div>
-                        <a href="#" onclick="chonPhim(4)">
-                            <img class="pic2" src="img/phim/cogiaoemlaso1.jpg" alt="">
-                            <div class="font">Cô giáo em là số 1</div>
-                        </a>
-                    </div>
-                    <div>
-                        <a href="#" onclick="chonPhim(5)">
-                            <img class="pic2" src="img/phim/conan.jpg" alt="">
-                            <div class="font">Conan</div>
-                        </a>
-                    </div>
-                    <div>
-                        <a href="#" onclick="chonPhim(6)">
-                            <img class="pic2" src="img/phim/deptraithaysaisai.jpg" alt="">
-                            <div class="font">Đẹp trai thấy sai sai</div>
-                        </a>
-                    </div> -->
                         <?php } ?>
 
                     </div>

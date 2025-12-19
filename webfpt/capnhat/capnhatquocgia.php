@@ -10,7 +10,6 @@
         .container {
             display: flex;
             justify-content: center;
-            align-items: center;
         }
 
         .warning {
@@ -19,48 +18,67 @@
             justify-content: center;
         }
 
-        form div{
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /* form div {
             width: 65%;
             margin: auto;
+        } */
+
+        input {
+            padding: 10px;
+            margin: 5px;
+            border-radius: 10px;
         }
     </style>
 </head>
 
 <body>
     <?php
-    include("connect.php");
+    include("./connect.php");
     $id = $_GET["id"];
-    $quocGia = $_GET["ten_quoc_gia"];
     $sql = "SELECT * FROM `quoc_gia` WHERE id='$id'";
     $result = mysqli_query($conn, $sql);
+    $quocGia = mysqli_fetch_assoc($result);
     ?>
+
     <div class="container">
-        <form action="index.php?page_layout=capnhatquocgia&id=<?php echo $id ?>" method="post">
-            <h1>Cập nhật quốc gia</h1>
+        <form action="index.php?page_layout=capnhatquocgia&id=<?php echo $quocGia["id"] ?>" method="POST">
             <div>
-                <input type="text" name="ten-quoc-gia" placeholder="Tên quốc gia"
-                    value="<?php echo $quocGia ?>">
+                <h1>Cập nhật quốc gia</h1>
             </div>
-            <div class="box">
-                <input type="submit" value="Cập nhật">
+            <div>
+                <input type="text" name="ten_quoc_gia" placeholder="Tên quốc gia"
+                    value="<?php echo $quocGia['ten_quoc_gia']; ?>">
             </div>
+            <button type="submit">Submit</button>
         </form>
     </div>
     <?php
-    if (
-        !empty($_POST["ten-quoc-gia"])
-    ) {
-        $tenQuocGia = $_POST["ten-quoc-gia"];
+    if (!empty($_POST['ten_quoc_gia'])) {
 
-        $sql = "UPDATE `quoc_gia` SET `ten_quoc_gia`='$tenQuocGia' WHERE id ='$id'";
-        $result = mysqli_query($conn, $sql);
-        header('location: index.php?page_layout=quocgia');
+        $tenQuocGia = $_POST['ten_quoc_gia'];
 
+        $sql = "UPDATE quoc_gia
+                    SET ten_quoc_gia = '$tenQuocGia'
+                    WHERE id = $id";
+
+        if (mysqli_query($conn, $sql)) {
+            header('Location: index.php?page_layout=quocgia');
+        } else {
+
+            echo 'Lỗi SQL: ' . mysqli_error($conn);
+        }
     } else {
-        echo "<p class= 'warning'> Vui lòng nhập đầy đủ thông tin ! </p>";
+
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            echo "<p class= 'warning'> Vui lòng nhập đầy đủ thông tin ! </p>";
+        }
     }
-
-
     ?>
 
 </body>

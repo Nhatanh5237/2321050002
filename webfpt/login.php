@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buổi 2</title>
+    <title>Log In</title>
 
     <style>
         .warning {
@@ -48,7 +48,7 @@
             session_start();
             $_SESSION["username"] = $tenDangNhap;
 
-            header('location: trangChu.php'); //nối sang trang index.php
+            header('location: index.php'); //nối sang trang index.php
 
         } else { // không có dữ liệu trả ra thì warning
             echo "<p class='warning'>Sai thông tin đăng nhập</p>";

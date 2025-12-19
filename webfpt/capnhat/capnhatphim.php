@@ -19,7 +19,7 @@
             justify-content: center;
         }
 
-        form div{
+        form div {
             width: 65%;
             margin: auto;
         }
@@ -36,38 +36,40 @@
     $phim = mysqli_fetch_assoc($result);
     ?>
     <div class="container">
-        <form action="index.php?page_layout=capnhatphim&id=<?php echo $phim["id"] ?>" method="post">
+        <form action="index.php?page_layout=capnhatphim&id=<?php echo $phim["id"] ?>" method="post"
+            enctype="multipart/form-data">
             <h1>Cập nhật phim</h1>
             <div>
                 <input type="text" name="ten-phim" placeholder="Tên phim" value="<?php echo $phim['ten_phim'] ?>">
             </div>
             <div>
-                
+
                 <select id="dao-dien" name="dao-dien">
                     <?php
-                        $sql = "SELECT nd.*, vt.ten_vai_tro FROM `nguoi_dung` nd JOIN vai_tro vt on nd.vai_tro_id = vt.id WHERE vt.id = 2";
-                        $result = mysqli_query($conn, $sql);
-                        while ($daoDien = mysqli_fetch_assoc($result)) {
-            ?>
-                    <option value=<?php echo $daoDien['id']?> <?php echo ($phim['dao_dien_id'] == $daoDien['id']) ? 'selected' : ''; ?>><?php echo $daoDien['ho_ten'] ?></option>
+                    $sql = "SELECT nd.*, vt.ten_vai_tro FROM `nguoi_dung` nd JOIN vai_tro vt on nd.vai_tro_id = vt.id WHERE vt.id = 2";
+                    $result = mysqli_query($conn, $sql);
+                    while ($daoDien = mysqli_fetch_assoc($result)) {
+                        ?>
+                        <option value=<?php echo $daoDien['id'] ?>     <?php echo ($phim['dao_dien_id'] == $daoDien['id']) ? 'selected' : ''; ?>><?php echo $daoDien['ho_ten'] ?></option>
                     <?php } ?>
                 </select>
             </div>
             <div>
-                <input type="number" name="nam-phat-hanh" placeholder="Năm phát hành" value="<?php echo $phim['nam_phat_hanh'] ?>">
+                <input type="number" name="nam-phat-hanh" placeholder="Năm phát hành"
+                    value="<?php echo $phim['nam_phat_hanh'] ?>">
             </div>
             <div>
-                <input type="text" name="poster" placeholder="Poster" value="<?php echo $phim['poster'] ?>">
+                <input type="file" name="poster" placeholder="Poster" value="<?php echo $phim['poster'] ?>">
             </div>
             <div>
-                
+
                 <select id="quoc-gia" name="quoc-gia">
                     <?php
-                        $sql = "SELECT * FROM `quoc_gia`";
-                        $result = mysqli_query($conn, $sql);
-                        while ($quocGia = mysqli_fetch_assoc($result)) {
-            ?>
-                    <option value=<?php echo $quocGia['id']?> <?php echo ($phim['quoc_gia_id'] == $quocGia['id']) ? 'selected' : ''; ?>><?php echo $quocGia['ten_quoc_gia'] ?></option>
+                    $sql = "SELECT * FROM `quoc_gia`";
+                    $result = mysqli_query($conn, $sql);
+                    while ($quocGia = mysqli_fetch_assoc($result)) {
+                        ?>
+                        <option value=<?php echo $quocGia['id'] ?>     <?php echo ($phim['quoc_gia_id'] == $quocGia['id']) ? 'selected' : ''; ?>><?php echo $quocGia['ten_quoc_gia'] ?></option>
                     <?php } ?>
                 </select>
             </div>
@@ -90,7 +92,6 @@
         !empty($_POST["ten-phim"]) &&
         !empty($_POST["dao-dien"]) &&
         !empty($_POST["nam-phat-hanh"]) &&
-        !empty($_POST["poster"]) &&
         !empty($_POST["quoc-gia"]) &&
         !empty($_POST["so-tap"]) &&
         !empty($_POST["trailer"]) &&
@@ -99,20 +100,38 @@
         $tenPhim = $_POST["ten-phim"];
         $daoDien = $_POST["dao-dien"];
         $namPhatHanh = $_POST["nam-phat-hanh"];
-        $poster = $_POST["poster"];
         $quocGia = $_POST["quoc-gia"];
         $soTap = $_POST["so-tap"];
         $trailer = $_POST["trailer"];
         $moTa = $_POST["mo-ta"];
 
-        $sql = "UPDATE `phim` SET `ten_phim`='$tenPhim',`dao_dien_id`='$daoDien',`nam_phat_hanh`='$namPhatHanh',`poster`='$poster',`quoc_gia_id`='$quocGia',`so_tap`='$soTap',`trailer`='$trailer',`mo_ta`='$moTa' WHERE id='$id'";
-        $result = mysqli_query($conn, $sql);
+        // XỬ LÝ POSTER
+        if (!empty($_FILES["poster"]["name"])) {
+            $target_dir = "uploads/";
+            $poster = $target_dir . basename($_FILES["poster"]["name"]);
+            move_uploaded_file($_FILES["poster"]["tmp_name"], $poster);
+        } else {
+            // Không upload ảnh mới → giữ ảnh cũ
+            $poster = $_POST["poster-cu"];
+        }
+
+        $sql = "UPDATE phim SET
+        ten_phim = '$tenPhim',
+        dao_dien_id = '$daoDien',
+        nam_phat_hanh = '$namPhatHanh',
+        poster = '$poster',
+        quoc_gia_id = '$quocGia',
+        so_tap = '$soTap',
+        trailer = '$trailer',
+        mo_ta = '$moTa'
+        WHERE id = '$id'";
+
+        mysqli_query($conn, $sql);
         header('location: index.php?page_layout=phim');
         ob_end_flush();
     } else {
-        echo "<p class= 'warning'> Vui lòng nhập đầy đủ thông tin ! </p>";
+        echo "<p class='warning'>Vui lòng nhập đầy đủ thông tin!</p>";
     }
-
 
     ?>
 

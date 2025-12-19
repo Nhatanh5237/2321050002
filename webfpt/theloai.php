@@ -67,7 +67,7 @@
 
                 <td class="chuc-nang">
                     <a class="btn sua" href="index.php?page_layout=capnhattheloai&id=<?php echo $row["id"] ?>&ten_the_loai=<?php echo $row["ten_the_loai"] ?>">Cập nhật</a>
-                    <a class="btn xoa" href="xoatheloai.php?id=<?php echo $row["id"] ?>">Xóa</a>
+                    <a class="btn xoa" href="xoa/xoatheloai.php?id=<?php echo $row["id"] ?>">Xóa</a>
                 </td>
             </tr>
         <?php } ?>
